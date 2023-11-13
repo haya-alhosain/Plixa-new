@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --secondary-color: #65174f;
+  --secondary-color-2: #551765;
+  --gradient: linear-gradient(
+    90deg,
+    #551765 0%,
+    rgba(85, 23, 101, 0.4) 41.26%,
+    rgba(101, 23, 79, 0.4) 66.53%
+  );
+  --dark-bg: #2b2b2b;
+  --light-bg: #fff;
+  --dark-text: #fff;
+  --light-text: #2b2b2b;
+  --black-opacity: rgba(79, 78, 78, 0.15);
+  --dark-gray: #6d6d70;
+  --text-light-gray: #aaa;
+  --border-radius: 2px;
+  --transition: 0.4s all ease-in-out;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: 0.4s all ease-in-out;
+}
+.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: 0.4s all ease-in-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+ul {
+  list-style: none;
+}
+input,
+button,
+textarea {
+  border: 0;
+  outline: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  resize: none;
+}
+::placeholder {
+  color: var(--text-light-gray);
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  max-width: 89.75vw;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-bw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-al-c {
+  display: flex;
+  align-items: center;
+}
+.selection span {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 2px solid hsla(251, 94%, 74%, 1);
+  position: absolute;
+}
+.selection {
+  width: max-content;
+  padding: 16px 24px;
+  border: 3px solid hsla(251, 94%, 74%, 1);
+  margin-bottom: 19px;
+  position: relative;
+}
+.blur-one::before {
+  content: "";
+  flex-shrink: 0;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--secondary-color-2);
+  filter: blur(100px);
+  z-index: 1;
+}
+.blur-two::after {
+  content: "";
+  position: absolute;
+  background: var(--secondary-color);
+  filter: blur(100px);
+  z-index: 1
+}
+.section-mt {
+  margin-top: 96px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .section-mt {
+    margin-top: 64px;
+  }
+  ::placeholder {
+    font-size: 16px;
+  }
+}

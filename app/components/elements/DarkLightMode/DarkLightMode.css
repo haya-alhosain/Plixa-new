@@ -1,0 +1,11 @@
+.theme-state-icon {
+  position: fixed;
+  right: 4.5vw;
+  bottom: 20px;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+ .theme-state-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.main-heading {
+  width: 100%;
+  margin-bottom: 48px;
+  z-index: 2100;
+  position: relative;
+}
+.main-heading h2 {
+  font-size: 49px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .main-heading {
+    margin: 64px 0 48px;
+  }
+  .main-heading h2 {
+    font-size: 32px;
+  }
+}
