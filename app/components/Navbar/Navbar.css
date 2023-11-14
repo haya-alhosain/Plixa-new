@@ -84,6 +84,7 @@ nav .nav-items .link {
 .nav-mobile-items::after {
   width: 176px;
   height: 176px;
+  border-radius: 176px;
   bottom: -20%;
   left: 50%;
   transform: translateX(-50%);
