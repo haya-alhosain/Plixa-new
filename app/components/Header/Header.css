@@ -1,5 +1,6 @@
 header {
   height: 100vh;
+  position: relative;
 }
 header .hero {
   height: 100%;
@@ -40,6 +41,7 @@ header .hero-img img {
 /* ============================ Button ===================== */
 header .hero-btn {
   padding: 12px 75px !important;
+  position: relative;
 }
 header .hero-btn-container {
   display: inline-block;
@@ -49,6 +51,11 @@ header .hero-btn-container {
 header .hero-btn-container .pointer {
   position: absolute;
   right: -32%;
+  bottom: -72%;
+}
+header .hero-btn-container .pointer-ar {
+  position: absolute;
+  right: 200px;
   bottom: -72%;
 }
 
@@ -72,6 +79,13 @@ header::after {
   }
 }
 @media (max-width: 1024px) {
+    header .hero-btn-container {
+    left: 0;
+    bottom: -8vh;
+    transform: translateX(0);
+    width: 100%;
+  }
+
   header .hero .container {
     flex-direction: column;
     text-align: center;
@@ -94,11 +108,7 @@ header::after {
     width: 70%;
     margin-top: 0;
   }
-  header .hero-btn-container {
-    left: 50%;
-    bottom: -8vh;
-    transform: translateX(-50%);
-  }
+
   header .selection {
     padding: 15px 15px;
     margin: 0 auto;
@@ -118,20 +128,27 @@ header::after {
     top: 80%;
     transform: translateX(-50%);
   }
+    header .hero-btn-container .pointer-ar {
+    position: absolute;
+    right:60%;
+    bottom:-68%;
+}
 }
 @media (max-width: 500px) {
-  header .hero-btn-container button,
-  header .hero-btn-container {
+    header .hero-btn-container button{
     width: 100%;
   }
   header .hero-img {
     width: 90%;
   }
-  header .hero-btn-container .pointer {
+  header .hero-btn-container .pointer{
     position: absolute;
-    right: 0;
+    right:0;
     bottom: -68%;
   }
+header .hero-btn-container .pointer-ar {
+  right: 75%;
+}
   header .header-content p {
     font-size: 16px;
   }

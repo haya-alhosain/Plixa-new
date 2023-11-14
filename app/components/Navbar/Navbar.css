@@ -21,7 +21,6 @@ nav .nav-items .link {
   padding: 15px;
   border-radius: var(--border-radius);
 }
-
 .active-link {
   color: var(--dark-text);
   font-weight: 700;
@@ -29,8 +28,6 @@ nav .nav-items .link {
 .login-btn {
   padding: 12px 24px;
   margin-left: 32px;
-  z-index: 5000;
-  position: relative;
 }
 /* =============================== Navbar Mobile ================================= */
 .nav-mobile-items {
@@ -57,11 +54,14 @@ nav .nav-items .link {
 }
 .nav-mobile-items .mobile-links .login-btn {
   display: block;
-  width: 90%;
+  width: 50%;
   margin: 5vh auto 0;
 }
 .closeIcon {
   font-size: 24px;
+}
+.toggleIcon {
+  display: none;
 }
 /* =============================== Select Language ============================== */
 .nav-sBtn-text,
@@ -93,9 +93,7 @@ nav .nav-items .link {
   transform: rotate(-90deg);
   margin-top: 3.5vh;
 }
-.toggleIcon {
-  display: none;
-}
+
 .switcher {
   display: inline-block;
   width: 16px;
@@ -113,6 +111,7 @@ nav .nav-items .link {
   background: var(--secondary-color-2);
   box-shadow: 0px 0.83077px 0.83077px -0.41538px;
 }
+
 /* =============================== Responsive Design ============================== */
 @media (max-width: 1024px) {
   nav {
@@ -121,6 +120,9 @@ nav .nav-items .link {
   nav .nav-items {
     display: none;
     transition: var(--transition);
+  }
+  .login-btn {
+    display: none;
   }
   .nav-mobile-items {
     display: flex;
@@ -143,4 +145,9 @@ nav .nav-items .link {
   .nav-sBtn-text span {
     font-size: 13px;
   }
+}
+@media (max-width: 500px) {
+  .nav-mobile-items .mobile-links .login-btn {
+    width: 90%;
+}
 }

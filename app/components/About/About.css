@@ -10,8 +10,8 @@
   background: var(--black-opacity);
   backdrop-filter: blur(2px);
   padding: 24px 14px;
-    position: relative;
-    overflow: hidden
+  position: relative;
+  overflow: hidden
 }
 .circle_left::after{
   content: "";

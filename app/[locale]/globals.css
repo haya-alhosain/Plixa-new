@@ -22,6 +22,9 @@
   --border-radius: 2px;
   --transition: 0.4s all ease-in-out;
 }
+html{
+    scroll-behavior: smooth;
+}
 html,
 body {
   max-width: 100vw;
@@ -30,14 +33,19 @@ body {
 .dark {
   background-color: var(--dark-bg);
   color: var(--dark-text);
-  transition: 0.4s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 .light {
   background-color: var(--light-bg);
   color: var(--light-text);
-  transition: 0.4s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
-
+.direction-rtl{
+  direction: rtl;
+}
+.direction-ltr{
+  direction: ltr;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -66,7 +74,6 @@ textarea {
 .container {
   max-width: 89.75vw;
   margin: 0 auto;
-  z-index: 10;
 }
 
 .flex-center {
@@ -108,14 +115,14 @@ textarea {
   position: absolute;
   background: var(--secondary-color-2);
   filter: blur(100px);
-  z-index: 1;
+  z-index:-1;
 }
 .blur-two::after {
   content: "";
   position: absolute;
   background: var(--secondary-color);
   filter: blur(100px);
-  z-index: 1
+  z-index: -1
 }
 .section-mt {
   margin-top: 96px;

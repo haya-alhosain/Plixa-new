@@ -4,17 +4,15 @@ import Contact from "@/app/components/Contact/Contact";
 import Footer from "@/app/components/Footer/Footer";
 import Services from "@/app/components/Services/Services";
 import Video from "@/app/components/elements/Video/Video";
-export default function Home()
-{
-
+export default function Home() {
   return (
     <main>
-      <Header />
-      <Video />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
+        <Header />
+        <Video />
+        <About />
+        <Services />
+        <Contact />
+        <Footer />
     </main>
   );
 }

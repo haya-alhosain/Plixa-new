@@ -23,11 +23,17 @@ export default function NavbarMobileitems() {
   function handleToggleMenu() {
     setToggleNavMenu(!ToggleNavMenu);
   }
+
+  let links = [
+    { id: 6, title: "Why Us", url: "#about" },
+    { id: 7, title: "Services", url: "#services" },
+    { id: 8, title: "Contact", url: "#contact" },
+  ];
   return (
     <>
       {ToggleNavMenu ? (
         <div
-          className="nav-mobile-items"
+          className="nav-mobile-items blur-two"
           style={
             mode === "dark"
               ? { backgroundColor: "#2b2b2b" }
@@ -44,43 +50,43 @@ export default function NavbarMobileitems() {
           </div>
           <ul className="mobile-links">
             <li>
-              <a href="/" className="link home-link">
+              <a
+                href="#"
+                className="link home-link"
+                onClick={() => setToggleNavMenu(false)}
+              >
                 {t("Home")}
               </a>
             </li>
-            <li>
-              <a href="/about" className="link">
-                {t("Why Us")}
-              </a>
-            </li>
-            <li>
-              <a href="/services" className="link">
-                {t("Services")}
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="link">
-                {t("Contact")}
-              </a>
-            </li>
-
+            {links.map((el) => {
+              return (
+                <li key={el.id}>
+                  <a
+                    href={el.url}
+                    className="link"
+                    onClick={() => setToggleNavMenu(false)}
+                  >
+                    {t(el.title)}
+                  </a>
+                </li>
+              );
+            })}
             <div className="nav-select-menu">
-              <div className="nav-select-btn flex-bw">
+              <div
+                className="nav-select-btn flex-bw"
+                onClick={() => setTogglePageLanguage(true)}
+              >
                 <div className="nav-sBtn-text">
                   <p>{t("App language")}</p>
                   <span>{t("English")}</span>
                 </div>
-                <BiChevronDown
-                  className="arrowGoLangPage"
-                  onClick={() => setTogglePageLanguage(true)}
-                />
+                <BiChevronDown className="arrowGoLangPage" />
               </div>
             </div>
-            <div className="toggle-mode flex-bw">
+            <div className="toggle-mode flex-bw" onClick={toggle}>
               <p>{t("Dark mode")}</p>
               <div
                 className="switcher-container"
-                onClick={toggle}
                 style={
                   mode === "dark"
                     ? { backgroundColor: "#551765" }

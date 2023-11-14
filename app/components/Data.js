@@ -31,17 +31,17 @@ export let links = [
   {
     id: 1,
     title: "Home",
-    url: "/",
+    url: "#",
   },
   {
     id: 3,
     title: "Services",
-    url: "/services",
+    url: "#services",
   },
   {
     id: 4,
     title: "Contact",
-    url: "/contact",
+    url: "#contact",
   },
 ];
 export let servicesData = [
@@ -65,21 +65,17 @@ export let servicesData = [
   },
 ];
 
-export let contactData = [
-  {
-    email: "info@pioneers.network",
-    phoneNumber: "+966 55 216 7445",
-  },
-];
-
 export let socialMediaIcons = [
   {
+    id:"01",
     icon: "/facebook.svg",
   },
   {
+    id:"02",
     icon: "/whatsapp.svg",
   },
   {
+    id:"03",
     icon: "/linkedin.svg",
   },
 ];

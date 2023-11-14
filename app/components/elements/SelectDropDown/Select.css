@@ -7,12 +7,12 @@
 .select-menu .options {
   position: absolute;
   left: 0;
+  text-align: center;
 }
 .select-menu .options li {
   font-size: 12px;
   margin: 2px 0;
   padding-bottom: 3px;
-  border-bottom: 1px solid #5c5c5c;
   cursor: pointer;
 }
 .select-menu .arrowDown {
