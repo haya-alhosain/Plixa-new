@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   --secondary-color: #65174f;
   --secondary-color-2: #551765;
@@ -23,9 +24,8 @@
   --transition: 0.4s all ease-in-out;
 }
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-html,
 body {
   max-width: 100vw;
   overflow-x: hidden;

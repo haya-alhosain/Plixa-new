@@ -9,7 +9,7 @@ export default function Contact()
   const { mode } = useContext(ThemeContext);
   return (
     <>
-      <section id="contact" className="contact-section section-mt">
+      <section data-section id="contact" className="contact-section section-mt">
         <div className={mode == "dark" ? "container blur-one" : "container"}>
           <MainTitle title="Get In Touch" />
           <Form mode={mode} />

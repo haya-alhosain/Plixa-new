@@ -35,7 +35,7 @@ export default function Slide({mode})
           </div>
           <div className={   mode == "dark" ? "slide-img" : `${ locale == "en"? "slide-img blur-top blur-bottom": "slide-img blur-top blur-bottom blur-top-ar blur-bottom-ar"}`}
           >
-            <Image className="" src={el.image} alt="" width={600} height={490} priority/>
+            <Image className="" src={el.image} alt="" width={600} height={500} priority/>
           </div>
         </div>
       );

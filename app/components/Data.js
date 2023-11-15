@@ -29,17 +29,17 @@ export let aboutData = [
 
 export let links = [
   {
-    id: 1,
+    id: 3,
     title: "Home",
     url: "#",
   },
   {
-    id: 3,
+    id: 1,
     title: "Services",
     url: "#services",
   },
   {
-    id: 4,
+    id: 2,
     title: "Contact",
     url: "#contact",
   },

@@ -12,19 +12,25 @@ nav .container {
   height: 100%;
 }
 nav .nav-items {
-  gap: 2px;
+  gap: 32px;
 }
 nav .nav-items .link {
   color: var(--text-light-gray);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
-  padding: 15px;
+  padding-bottom: 12px;
   border-radius: var(--border-radius);
 }
-.active-link {
-  color: var(--dark-text);
-  font-weight: 700;
+.active-link-dark {
+  color: var(--dark-text) !important;
+  font-weight: 700 !important;
 }
+
+.active-link-light {
+  color: var(--light-text) !important;
+  font-weight: 700 !important;
+}
+
 .login-btn {
   padding: 12px 24px;
   margin-left: 32px;

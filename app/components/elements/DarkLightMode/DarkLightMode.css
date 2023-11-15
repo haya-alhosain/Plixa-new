@@ -1,9 +1,16 @@
 .theme-state-icon {
   position: fixed;
-  right: 4.5vw;
+ 
   bottom: 20px;
   cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: var(--border-radius);
   z-index: 10000;
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  border: 1px solid #4F4E4E;
+background: rgba(79, 78, 78, 0.15);
+backdrop-filter: blur(4px);
 }
 @media (max-width: 1024px) {
  .theme-state-icon {

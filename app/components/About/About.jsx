@@ -11,7 +11,15 @@ export default function About()
   const { mode } = useContext(ThemeContext);
   return (
     <>
-      <section id="about" className={`${mode === "dark"  ? "about-section section-mt blur-one" : "about-section section-mt"}`}>
+      <section
+        data-section
+        id="about"
+        className={`${
+          mode === "dark"
+            ? "about-section section-mt blur-one"
+            : "about-section section-mt"
+        }`}
+      >
         <div className="container">
           <MainTitle title="Why Us" />
           <CardAbout mode={mode} />

@@ -1,11 +1,26 @@
+
 import "./DarkLightMode.css";
 import Image from "next/image";
-export default function DarkLightMode({ mode, toggle }) {
+export default function DarkLightMode({ mode, toggle , locale })
+{
+  function handleDarkLightToggle() {
+    toggle();
+  }
   return (
     <>
-      <Image className="theme-state-icon" src={mode === "dark" ? "./Light mode.svg" : "./Dark mode.svg"} alt=""
-        width={45} height={45} priority onClick={toggle}
-      />
+      <div
+        className="theme-state-icon flex-center"
+        onClick={handleDarkLightToggle}
+        style={locale == "en" ? { right: "4.5vw" } : { left: " 4.5vw" }}
+      >
+        <Image
+          src={mode === "dark" ? "/sun.svg" : "/moon.svg"}
+          alt=""
+          width={24}
+          height={24}
+          priority
+        />
+      </div>
     </>
   );
 }
